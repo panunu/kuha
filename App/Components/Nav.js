@@ -18,9 +18,7 @@ export default class Nav extends Component {
       <Navigator
         {...this.props}
         renderScene={this.renderScene}
-        configureScene={route => {
-          return route.sceneConfig && Navigator.SceneConfigs.FloatFromRight;
-        }}
+        configureScene={route => route.sceneConfig || Navigator.SceneConfigs.FloatFromRight}
       />
     );
   }
