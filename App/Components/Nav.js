@@ -5,11 +5,10 @@ export default class Nav extends Component {
   renderScene(route, navigator) {
     const Scene = route.component;
 
+    // TODO: Put Navigator into state?
+
     return (
-      <Scene
-        route={route}
-        navigator={navigator}
-      />
+      <Scene route={route} navigator={navigator}/>
     );
   }
 

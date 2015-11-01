@@ -1,6 +1,6 @@
 import React from 'react-native';
-import List from './List';
-import buttonStyles from '../Styles/buttonStyles';
+import ListContainer from './smart/ListContainer';
+import buttonStyles from '../styles/buttonStyles';
 
 const {
   Component,
@@ -11,13 +11,10 @@ const {
 } = React;
 
 export default class Main extends Component {
-
   onViewFishesButton() {
     const { navigator } = this.props;
 
-    navigator.push({
-      component: List
-    })
+    navigator.push({component: ListContainer});
   }
 
   render() {

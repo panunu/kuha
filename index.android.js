@@ -1,8 +1,8 @@
 'use strict';
 
 import React from 'react-native';
-import Nav from './App/Components/Nav';
-import Main from './App/Components/Main';
+import Nav from './App/components/Nav';
+import Main from './App/components/Main';
 
 const { AppRegistry, Component } = React;
 

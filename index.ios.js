@@ -1,19 +1,14 @@
 'use strict';
 
 import React from 'react-native';
-import Nav from './App/Components/Nav';
-import Main from './App/Components/Main';
+import OurApp from './App/components/App';
 
 const { AppRegistry, Component } = React;
 
 class App extends Component {
   render() {
     return (
-      <Nav
-        initialRoute={{
-          component: Main
-        }}
-      />
+      <OurApp />
     );
   }
 }

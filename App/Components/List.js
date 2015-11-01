@@ -1,5 +1,5 @@
 import React from 'react-native';
-import buttonStyles from '../Styles/buttonStyles';
+import buttonStyles from '../styles/buttonStyles';
 
 const {
   Component,
@@ -10,16 +10,17 @@ const {
 } = React;
 
 export default class List extends Component {
-
-  onBackButton() {
-    this.props.navigator.pop();
-  }
-
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>List component</Text>
-        <TouchableOpacity onPress={this.onBackButton.bind(this)}>
+
+        {this.props.data.map((fish, key) => {
+          return (
+            <Text style={styles.text} key={key}>{fish.name}</Text>
+          );
+        })}
+
+        <TouchableOpacity onPress={this.props.onBackButton}>
           <View style={[buttonStyles.button, styles.button]}>
             <Text style={buttonStyles.text}>Back</Text>
           </View>
@@ -27,7 +28,6 @@ export default class List extends Component {
       </View>
     );
   }
-
 }
 
 const styles = StyleSheet.create({
